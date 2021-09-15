@@ -43,6 +43,7 @@ public class BookController {
 
 //    跳转到添加书籍页面
     @RequestMapping("/toAdd")
+    @RequiresPermissions("/admin:add")
     public String toAddPage(){
         return "add";
     }
@@ -58,6 +59,7 @@ public class BookController {
 
 //    跳转到修改书籍页面
     @RequestMapping("/toUpdate/{bookId}")
+    @RequiresPermissions("admin:update")
     public String toUpdatePage(@PathVariable("bookId") int id, Model model){
         Books book = bookService.selectOneById(id);
         model.addAttribute("book", book);
@@ -83,7 +85,7 @@ public class BookController {
 
 //    按照名字查询书籍
     @RequestMapping("/search")
-    @RequiresPermissions("admin:select")
+    @RequiresPermissions("user:select")
     public String selectBookByName(@RequestParam("bookName") String name, Model model){
         List<Books> books = bookService.selectByName(name);
         model.addAttribute("books", books);

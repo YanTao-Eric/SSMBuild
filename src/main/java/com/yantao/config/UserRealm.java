@@ -13,6 +13,10 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by IntelliJ IDEA.
  *
@@ -43,7 +47,13 @@ public class UserRealm extends AuthorizingRealm {
         Subject subject = SecurityUtils.getSubject();
         User currentUser = (User) subject.getPrincipal();
         Role role = roleService.selectRoleById(currentUser.getRid().toString());
-        authorizationInfo.addStringPermission(role.getRprems());
+//        设置角色
+        authorizationInfo.addRole(role.getRname());
+//        设置权限
+        String[] perms = role.getRprems().split(",");
+        System.out.println("perms==>" + Arrays.toString(perms));
+        Set<String> permissions = new HashSet<>(Arrays.asList(perms));
+        authorizationInfo.setStringPermissions(permissions);
         return authorizationInfo;
     }
 
@@ -59,6 +69,6 @@ public class UserRealm extends AuthorizingRealm {
         }
 
 //        密码认证 shiro做
-        return new SimpleAuthenticationInfo(user, user.getPassword(), "");
+        return new SimpleAuthenticationInfo(user, user.getPassword(), getName());
     }
 }

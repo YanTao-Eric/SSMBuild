@@ -18,4 +18,5 @@ public class Role {
     private Integer rid;
     private String rname;
     private String rprems;
+    private String rdescription;
 }

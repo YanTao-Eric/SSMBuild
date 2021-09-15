@@ -39,7 +39,7 @@
         </div>
         <div class="layui-form-item">
             <div class="layui-input-block">
-                <input type="checkbox" name="rememberMe" id="rememberMe" lay-skin="primary" title="两周内免登录">
+                <input type="checkbox" name="rememberMe" id="rememberMe" value="true" lay-skin="primary" title="一周内免登录">
             </div>
         </div>
         <button type="submit" class="layui-btn layui-btn-normal" style="margin-left: 15px;">LOGIN</button>
