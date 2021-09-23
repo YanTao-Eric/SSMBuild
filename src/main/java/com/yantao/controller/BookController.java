@@ -34,7 +34,6 @@ public class BookController {
 
     //    查询全部书籍，并且返回到一个书籍展示页面
     @RequestMapping("/all")
-    @RequiresPermissions("admin:select")
     public String selectAllBooks(Model model){
         List<Books> books = bookService.selectAll();
         model.addAttribute("books", books);
@@ -43,14 +42,12 @@ public class BookController {
 
 //    跳转到添加书籍页面
     @RequestMapping("/toAdd")
-    @RequiresPermissions("/admin:add")
     public String toAddPage(){
         return "add";
     }
 
 //    添加书籍，并跳转到书籍展示页面
     @RequestMapping("/add")
-    @RequiresPermissions("/admin:add")
     public String insert(Books books){
         System.out.println("books==>" + books);
         bookService.insert(books);
@@ -59,7 +56,6 @@ public class BookController {
 
 //    跳转到修改书籍页面
     @RequestMapping("/toUpdate/{bookId}")
-    @RequiresPermissions("admin:update")
     public String toUpdatePage(@PathVariable("bookId") int id, Model model){
         Books book = bookService.selectOneById(id);
         model.addAttribute("book", book);
@@ -68,7 +64,6 @@ public class BookController {
 
 //    更改书籍，并跳转到书籍展示页面
     @RequestMapping("/update")
-    @RequiresPermissions("admin:update")
     public String update(Books books){
         System.out.println("books==>" + books);
         bookService.update(books);
@@ -77,7 +72,6 @@ public class BookController {
 
 //    删除书籍，并跳转到书籍展示页面
     @RequestMapping("/delete")
-    @RequiresPermissions("admin:delete")
     public String delete(@RequestParam("id") int bookId){
         bookService.delete(bookId);
         return "redirect:/book/all";
@@ -85,7 +79,6 @@ public class BookController {
 
 //    按照名字查询书籍
     @RequestMapping("/search")
-    @RequiresPermissions("user:select")
     public String selectBookByName(@RequestParam("bookName") String name, Model model){
         List<Books> books = bookService.selectByName(name);
         model.addAttribute("books", books);

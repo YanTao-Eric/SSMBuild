@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="SSMBuild:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/SSMBuild_war_exploded</output-path>
+  <artifact type="exploded-war" name="SSMBuild-SpringSecurity:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/SSMBuild_SpringSecurity_war_exploded</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="SSMBuild/web/Web" />
       <element id="directory" name="WEB-INF">
@@ -20,6 +20,10 @@
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:2.0.6" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.5.7" />
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.20" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.5.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.5.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-crypto:5.5.2" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.5.2" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.6" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.3.6" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.3.6" />
@@ -30,23 +34,6 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.3.6" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.3.6" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.6" />
-          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.9.4" />
-          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.2" />
-          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-cache:1.8.0" />
-          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-config-core:1.8.0" />
-          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-config-ogdl:1.8.0" />
-          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-core:1.8.0" />
-          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-crypto-cipher:1.8.0" />
-          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-crypto-core:1.8.0" />
-          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-crypto-hash:1.8.0" />
-          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-event:1.8.0" />
-          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-lang:1.8.0" />
-          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-spring:1.8.0" />
-          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-web:1.8.0" />
-          <element id="library" level="project" name="Maven: org.owasp.encoder:encoder:1.2.2" />
-          <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache-core:2.6.11" />
-          <element id="library" level="project" name="Maven: org.apache.shiro:shiro-ehcache:1.8.0" />
-          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.1" />
         </element>
       </element>
     </root>
