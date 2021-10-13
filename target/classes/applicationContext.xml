@@ -6,6 +6,5 @@
     <import resource="spring-dao.xml"/>
     <import resource="spring-service.xml"/>
     <import resource="springmvc-servlet.xml"/>
-    <import resource="spring-shiro-web.xml"/>
 
 </beans>
