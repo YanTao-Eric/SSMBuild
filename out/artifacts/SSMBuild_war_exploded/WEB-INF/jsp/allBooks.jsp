@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="col-md-4 column form-inline" style="float: right">
-                <a class="btn btn-primary" href="${pageContext.request.contextPath}/logout">注销</a>
+                <a class="btn btn-primary" href="${pageContext.request.contextPath}/">首页</a>
             </div>
             <div class="col-md-4 column">
                 <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/toAdd">添加书籍</a>
