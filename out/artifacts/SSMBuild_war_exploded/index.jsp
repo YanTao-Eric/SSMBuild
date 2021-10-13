@@ -38,10 +38,10 @@
         </style>
     </head>
     <body>
-        <h3>
-            <a href="${pageContext.request.contextPath}/login.html">登录</a>
-        </h3>
-        欢迎[]登录！<a href="${pageContext.request.contextPath}/logout.html">注销</a>
+<%--        <h3>--%>
+<%--            <a href="${pageContext.request.contextPath}/login.html">登录</a>--%>
+<%--        </h3>--%>
+<%--        欢迎[]登录！<a href="${pageContext.request.contextPath}/logout.html">注销</a>--%>
         <h3>
             <a href="${pageContext.request.contextPath}/book/all">查询全部书籍</a>
         </h3>
