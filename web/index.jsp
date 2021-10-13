@@ -1,4 +1,3 @@
-<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: YanTao
@@ -39,16 +38,12 @@
         </style>
     </head>
     <body>
-    <shiro:guest>
         <h3>
             <a href="${pageContext.request.contextPath}/login.html">登录</a>
         </h3>
-    </shiro:guest>
-    <shiro:user>
-        欢迎[<shiro:principal/>]登录！<a href="${pageContext.request.contextPath}/logout.html">注销</a>
+        欢迎[]登录！<a href="${pageContext.request.contextPath}/logout.html">注销</a>
         <h3>
             <a href="${pageContext.request.contextPath}/book/all">查询全部书籍</a>
         </h3>
-    </shiro:user>
     </body>
 </html>
